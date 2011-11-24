@@ -159,6 +159,10 @@ package com.probertson.data
 				{
 					stmt = new SQLStatement();
 					stmt.text = sql;
+					
+					if (statementBatch[i].itemClass)
+						stmt.itemClass = statementBatch[i].itemClass;
+					
 					_batchStmtCache[sql] = stmt;
 				}
 				

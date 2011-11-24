@@ -28,17 +28,21 @@ package com.probertson.data
 	public class QueuedStatement
 	{
 		
-		public function QueuedStatement(sql:String, parameters:Object=null)
+		public function QueuedStatement(sql:String, parameters:Object=null, itemClass:Class=null)
 		{
 			_statementText = sql;
 			_parameters = parameters;
+			_itemClass = itemClass;
 		}
 		
 		// ------- Public properties -------
 		private var _statementText:String;
 		public function get statementText():String { return _statementText; }
 		
-		private var _parameters:Object
+		private var _parameters:Object;
 		public function get parameters():Object { return _parameters; }
+		
+		private var _itemClass:Class;
+		public function get itemClass():Class { return _itemClass; }
 	}
 }
